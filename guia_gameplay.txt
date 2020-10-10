@@ -1,0 +1,128 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// Guillermo Cruz - 682433                                                              //
+// Daniel Cay - 741066                                                                  //
+// Javier Fañanás - 737987                                                              //
+//////////////////////////////////////////////////////////////////////////////////////////
+
+En el siguiente documento se describen a los luchadores que podemos elegir en el juego, asi
+como sus estadisticas y movimientos personalizados. Tambien se describen los movimientos generales.
+
+////////////////////////////////////////  LUCHADORES //////////////////////////////////////////////
+
+BLANKA:
+
+Stats:
+Speed Move   [-  ]
+Speed Attack [-- ]
+Damage       [-- ]
+
+Special Attack: Electric Shock
+Damage         [---]
+Range          [---]
+Risk           [---]
+- Este ataque especial tiene mas rango que cualquier ataque fisico, y causa daño de forma casi
+instantanea.
+- Afecta si el contrincante esta agachado o de pie.
+- Mientras Blanka realiza este ataque, no puede realizar ningun movimiento, y puede afectarle el
+  hadouken de Ryu o el Kikouken de Chun.
+
+Comportamiento de la IA:
+- La IA con Blanka trata de mantenerse cerca del contrincante, ya que es el luchador mas lento.
+  Ademas, contra mas cerca esta de su contrario es mas probable que aproveche el Electric Shock.
+
+
+CHUN LI:
+
+Stats:
+Speed Move   [---]
+Speed Attack [---]
+Damage       [-- ]
+
+Special Attack: Kikouken
+Throwing speed [-  ]
+Damage         [---]
+Range          [MAX]
+Risk           [---]
+- Proyectil con rango muy alto (Equivalente al ancho de la resolucion del juego).
+- Solo se puede esquivar saltando el proyectil.
+- Mientras Chun Li carga el ataque, se le puede golpear y asi cancelar el Kikouken.
+
+Comportamiento de la IA:
+- Chun Li es la luchadora mas agil, la IA tratara de aprovecharse de esta ventaja tratando de
+  esquivar mas ataques que los otros luchadores. Especialmente, es mas propensa a realizar saltos.
+- Ademas, es propensa a alejarse para tratar de realizar el Kikouken.
+
+
+RYU:
+
+Stats:
+Speed Move   [-- ]
+Speed Attack [-- ]
+Damage       [---]
+
+Special Attack: Hadouken
+Throwing speed [-  ]
+Damage         [---]
+Range          [MAX]
+Risk           [---]
+- Proyectil con rango muy alto (Equivalente al ancho de la resolucion del juego).
+- Solo se puede esquivar saltando el proyectil.
+- Mientras Ryu carga el ataque, se le puede golpear y asi cancelar el Hadouken.
+
+Comportamiento de la IA:
+- Tiene un comportamiento bastante equilibrado, aunque tambien tiende a alejarse para tratar
+  de utilizar el Hadouken.
+
+
+Comportamientos generales de la IA:
+Todos los luchadores tienen estos comportamientos:
+- Si la vida de la IA es menor a la mitad, pasara a jugar de forma mas defensiva
+- Si la vida del jugador es menor a la mitad, pasara a jugar de forma mas agresivad
+
+
+/////////////////////////////////  MOVIMIENTOS GENERALES ///////////////////////////////////////
+
+Ataques:
+Las estadisticas de estos movimientos se ven modificadas positivamente a partir de las stats de
+los luchadores.
+Nota: Si un ataque se esquiva saltando, al comenzar a saltar o al finalizar el salto, el ataque
+se puede recibir (Como si el jugador estuviera de pie).
+
+Puñetazo medio:
+Speed Attack [---]
+Damage       [-- ]
+Range        [-  ]
+Risk         [-- ]
+- Puede esquivarse agachandose o saltando
+
+Patada baja:
+Speed Attack [---]
+Damage       [-  ]
+Range        [-- ]
+Risk         [-  ]
+- Puede esquivarse saltando
+
+Patada alta:
+Speed Attack [-- ]
+Damage       [-  ]
+Range        [-- ]
+Risk         [-  ]
+- Puede esquivarse agachadonse
+
+
+Movimientos:
+
+Movimiento hacia adelante: A la velocidad maxima del luchador.
+
+Movimiento hacia atras: A la mitad de la velocidad del luchador.
+
+Salto hacia adelante: Pulsando la tecla de salto y movimiento hacia adelante simultaneamente. 
+
+Bloqueo: Cuando vamos a recibir un ataque que puede afectarnos estando de pie (No especial),
+         podemos bloquearlo utilizando la tecla de caminar hacia atras.
+
+Golpeado: Cuando recibimos un golpe, el personaje retrocede ligeramente. Mientras estas
+          retrocediendo, no se puede realizar ninguna accion.
+
+Golpeado alto: Si te golpean mientras estas saltando, el luchador da una voltereta hacia
+          atras y cae de pie.

@@ -1,0 +1,84 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// Guillermo Cruz - 682433                                                              //
+// Daniel Cay - 741066                                                                  //
+// Javier Fañanás - 737987                                                              //
+//////////////////////////////////////////////////////////////////////////////////////////
+
+En el siguiente documento se describe el contenido del juego, asi como todas las opciones
+y modos de juego disponibles.
+
+////////////////////////////////////// MENU INICIAL //////////////////////////////////////
+
+Al iniciar el juego, se reproducira la intro del mismo. Cuando el juego indique que hay que
+pulsar "enter", se puede acceder al menu inicial. Se observaran 4 opciones:
+
+1 - Game Start: Historia de un jugador.
+2 - VS Battle: Jugador VS Jugador.
+3 - Option Mode: Muestra el menu de opciones.
+4 - Ranking: Muestra el TOP 10 del ranking de partidas del modo historia de un jugador.
+5 - Quit Game: Sale del juego. En cualquier punto del juego se puede realizar esta accion
+               pulsando la tecla ESC.
+
+Si en este menu no se realiza ninguna accion, saltara una batalla CPU vs CPU con dos
+personajes aleatorios en un escenario aleatorio. El nivel de la IA de esta demo es la
+que tenga el usuario seleccionada en el menu de opciones.
+
+//////////////////////////////////////// OPCIONES //////////////////////////////////////
+
+Se puede acceder al menu opciones desde el menu inicial, seleccionando "Option Mode" o
+mientras estamos en una batalla pulsando "P". En este menu hay las siguientes opciones:
+
+1 - Sound: Permite indicar si se quiere sonido y musica en el juego, o no.
+2 - Music Volume: Permite seleccionar el volumen de la musica.
+3 - Effects Volume: Permite indicar el volumen de los efectos.
+4 - Difficulty: Permite seleccionar la dificultad de la IA, para el modo historia y para   
+                las peleas demo. Se puede seleccionar entre facil, medio, dificil o
+                progresivo, esta última si queremos que en el modo historia cada pelea sea 
+		mas dificil que la anterior.
+5 - Controles: Si seleccionamos esta opcion, iremos a la pantalla de controles. En esta
+               pantalla se puede ver los controles tanto del jugador 1 como del jugador 2.
+               Ademas, se pueden cambiar estos controles de forma sencilla, seleccionando
+               el control que queremos cambiar y pulsando la tecla deseada.
+
+Toda la configuracion que se cambia en este menu es persistente, no se restaura la de base 
+cuando cerramos el juego.
+
+///////////////////////////////////// MODO HISTORIA /////////////////////////////////////
+
+Cuando se accede al modo historia, podremos elegir entre los 3 luchadores disponibles.
+Una vez seleccionado el personaje, se realizaran dos combates, uno contra cada uno de los
+otros dos luchadores. El escenario en el que se combate es el escenario del luchador
+contrario.
+
+Cada uno de los combates esta formado por 3 rondas, en las que gana el luchador que consigue
+ganar 2 rondas primero. Se gana una ronda rebajando la vida del contrincante a 0.
+
+En cada uno de los combates obtenemos puntos, la puntuacion final de la partida sera la suma
+de los puntos obtenidos en los dos combates. En cada combate se obtienen puntos de la siguiente
+forma:
+- 500 Pts por cada golpe acertado
+- Al final de cada ronda, si el jugador gana, recibe una bonificacion por el tiempo que le ha
+sobrado, si es el caso, y por la vida que le quede. Esta bonificacion es multiplicada por un
+valor dependiendo de la dificultad de la partida:
+    - Facil: x1
+    - Medio: x1.2
+    - Dificil: x1.4
+
+Si en cualquiera de las peleas del modo historia perdemos, saltara la pantalla del ranking para
+que rellenemos con nuestras iniciales y la puntuacion obtenida hasta ese momento.
+
+Si ganamos el modo historia, se observara una cinematica personalizada para cada luchador, y 
+posteriormente saltara la pantalla de ranking.
+
+/////////////////////////////////////// VS BATTLE ///////////////////////////////////////
+
+Cuando se accede al modo VS BATTLE (Jugador VS Jugador), podremos elegir entre 3 personajes, 
+uno para el jugador 1 y otro para el jugador 2. Una vez seleccionados y confirmados, 
+se realizara un combate al mejor de 3 rondas entre los dos jugadores, en el escenario del 
+luchador elegido por el jugador 2.
+
+/////////////////////////////////////// INSPIRACION ///////////////////////////////////////
+Puesto que el juego se ha basado en el Street Fighter 2 original, es decir, se ha intentado
+recrear dicho juego con la mayor exactitud posible las distintas animaciones y sonidos presentes
+son los del juego original. Cabe mencionar que algunos aspectos incluidos en el juego son de 
+Inspiración propia por lo que no se ha buscado recrear al cien por cien el juego original.
